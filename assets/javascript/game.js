@@ -7,9 +7,6 @@ var totalScore = 0;
 var wins = 0;
 var losses = 0;
 
-$("#totalScore").html(totalScore);
-
-
 // function to start game
 function initGame() {
     //To get a random number between 19 and 120
@@ -53,8 +50,9 @@ $("#blue").on("click", function() {
     console.log(totalScore);
 });
 
+$("#totalScore").html(totalScore);
 
-// Win / lose function
+// Win / lose function - if total score from player matches random number generated, win totals increment
 
 function winLose() {
     if(totalScore == randNum) {
@@ -63,13 +61,13 @@ function winLose() {
         resetGame();
     }
 
+// If total score from player
     if(totalScore >= randNum) {
         losses++;
         $("#lossTotal").html(losses);
         resetGame();
     }
 }
-
 
 // Function to reset the game
 function resetGame() {
@@ -86,8 +84,6 @@ function resetGame() {
 $(function() {
 
     initGame();
-
-
 
 });
 

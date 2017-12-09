@@ -53,6 +53,11 @@ h3 {
     margin-bottom: 70px;
 }
 
+.card {
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .buttons {
     padding-top: 20px;
 }
