@@ -60,7 +60,7 @@
                                 Random Number
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">78</li>
+                                <li class="list-group-item" id="randomNum">0</li>
                             </ul>
                         </div>
                     </div>
@@ -70,31 +70,31 @@
                                 Your total score is:
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">56</li>
+                                <li class="list-group-item" id="totalScore">0</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card" style="width: 20rem;">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Wins: 0</li>
-                                <li class="list-group-item">Losses: 0</li>
+                                <li class="list-group-item">Wins: <span id="winTotal"></span></li>
+                                <li class="list-group-item">Losses: <span id="lossTotal"></span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="row buttons">
                     <div class="col-md-3">
-                        <img src="assets/images/purple.png" alt="purple-crystal" />
+                        <img src="assets/images/purple.png" alt="purple-crystal" id="purple"/>
                     </div>
                     <div class="col-md-3">
-                        <img src="assets/images/pink.png" alt="pink-crystal" />
+                        <img src="assets/images/pink.png" alt="pink-crystal" id="pink"/>
                     </div>
                     <div class="col-md-3">
-                        <img src="assets/images/orange.png" alt="orange-crystal" />
+                        <img src="assets/images/orange.png" alt="orange-crystal" id="orange"/>
                     </div>
                     <div class="col-md-3">
-                        <img src="assets/images/blue.png" alt="blue-crystal" />
+                        <img src="assets/images/blue.png" alt="blue-crystal" id="blue"/>
                     </div>
                 </div>
             </div>
@@ -110,16 +110,17 @@
         </div>
     </footer>
 
-    <!-- My JavaSccript file -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
+
+    <!-- My JavaSccript file -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
 </body>
 
 </html>
