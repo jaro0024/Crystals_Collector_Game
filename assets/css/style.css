@@ -1,45 +1,66 @@
 html {
     overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    background-image: url(../images/background_img2.png);
+}
+
+h3 {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .jumbotron {
-    background-color: ;
-    color: ;
-    font-family: ;
+    background-color: #5f5d5d;
+    color: #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
     height: 120px;
     padding-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 6px solid #4d4747;
 }
 
-.lead {
-    font-size: 
-    font-family: 
-}
-
-/* .sport-img, .scoreboard {
-    border: 2px solid #6d38b8;
-    padding: 40px;
-}
-
-.start-game {
-    font-size: 28px;
-}
-
-p {
-    font-size: 24px;
+.btn {
+    background-color: #5f5d5d;
     font-weight: bold;
-    font-family: 'Acme', sans-serif;
 }
 
-span {
-    font-size: 20px;
-    font-weight: bold;
-    font-family: 'Acme', sans-serif;
+.btn:hover {
+    background-color: #4d4747;
 }
 
-#game {
-    margin-bottom: 80px;
-} */
+#collapseRules {
+    padding-bottom: 10px;
+}
+
+.listRules {
+    margin-bottom: 0;
+}
+
+.rules, .main {
+    border: 2px solid #5f5d5d;
+    background-color: #ffffff;
+}
+.rules {
+    padding-top: 20px;
+    margin-bottom: 10px;
+} 
+
+.main {
+    padding: 20px;
+    margin-bottom: 70px;
+}
+
+.buttons {
+    padding-top: 20px;
+}
+
+
+
+
+
 
 .footer {
     position: fixed;
@@ -47,8 +68,8 @@ span {
     width: 100%;
     height: 60px;
     line-height: 55px; 
-    color: ;
-    background-color: ;
-    border-top: 6px solid ;
+    color: #ffffff;
+    background-color: #5f5d5d;
+    border-top: 6px solid #4d4747;
     text-align: center;
 }
