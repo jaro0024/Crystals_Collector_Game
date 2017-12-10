@@ -50,8 +50,6 @@ $("#blue").click(function () {
     console.log(totalScore);
 });
 
-// $("#totalScore").html();
-
 // Win / lose function 
 
 // If total score from player matches random number generated, win totals increment and game resets
@@ -108,5 +106,5 @@ $(function () {
         reset();
         alert("Restarting game!");
     });
-        
+
 });
