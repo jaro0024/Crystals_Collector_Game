@@ -14,55 +14,56 @@ function initGame() {
     $("#randomNum").html(randNum);
 
     // To get random numbers for each crystal between 1 and 12
-    purpleNum = Math.floor(Math.random() * 11 + 1);
-    pinkNum = Math.floor(Math.random() * 11 + 1);
-    orangeNum = Math.floor(Math.random() * 11 + 1);
-    blueNum = Math.floor(Math.random() * 11 + 1);
+    purpleNum = Math.floor((Math.random() * 12) + 1);
+    pinkNum = Math.floor((Math.random() * 12) + 1);
+    orangeNum = Math.floor((Math.random() * 12) + 1);
+    blueNum = Math.floor((Math.random() * 12) + 1);
 }
 
-// To get values when player clicks on crystals
+// To get values when player clicks on crystals and add them as the player clicks
 
-$("#purple").on("click", function() {
+$("#purple").click(function () {
     totalScore += purpleNum;
-    $("#purple").html(totalScore);
+    $("#totalScore").html(totalScore);
     winLose();
     console.log(totalScore);
 });
 
-$("#pink").on("click", function() {
+$("#pink").click(function () {
     totalScore += pinkNum;
-    $("#pink").html(totalScore);
+    $("#totalScore").html(totalScore);
     winLose();
     console.log(totalScore);
 });
 
-$("#orange").on("click", function() {
+$("#orange").click(function () {
     totalScore += orangeNum;
-    $("#orange").html(totalScore);
+    $("#totalScore").html(totalScore);
     winLose();
     console.log(totalScore);
 });
 
-$("#blue").on("click", function() {
+$("#blue").click(function () {
     totalScore += blueNum;
-    $("#blue").html(totalScore);
+    $("#totalScore").html(totalScore);
     winLose();
     console.log(totalScore);
 });
 
-$("#totalScore").html(totalScore);
+// $("#totalScore").html();
 
-// Win / lose function - if total score from player matches random number generated, win totals increment
+// Win / lose function 
 
+// If total score from player matches random number generated, win totals increment and game resets
 function winLose() {
-    if(totalScore == randNum) {
+    if (totalScore == randNum) {
         wins++;
         $("#winTotal").html(wins);
         resetGame();
     }
 
-// If total score from player
-    if(totalScore >= randNum) {
+    // If total score from player doesn't match the random number generated, loss totals increment and game resets
+    if (totalScore >= randNum) {
         losses++;
         $("#lossTotal").html(losses);
         resetGame();
@@ -77,13 +78,35 @@ function resetGame() {
     orangeNum = Math.floor(Math.random() * 11 + 1);
     blueNum = Math.floor(Math.random() * 11 + 1);
     totalScore = 0;
+    $("#totalScore").html(totalScore);
+    initGame();
+}
+
+// Function to reset game when clicking button
+
+function reset() {
+    randNum = Math.floor(Math.random() * 101 + 19);
+    purpleNum = Math.floor(Math.random() * 11 + 1);
+    pinkNum = Math.floor(Math.random() * 11 + 1);
+    orangeNum = Math.floor(Math.random() * 11 + 1);
+    blueNum = Math.floor(Math.random() * 11 + 1);
+    totalScore = 0;
+    wins = 0;
+    losses = 0;
+    $("#totalScore").html(totalScore);
+    $("#winTotal").html(wins);
+    $("#lossTotal").html(losses);
     initGame();
 }
 
 // Ready function
-$(function() {
+$(function () {
 
     initGame();
 
+    $("#reset").click(function () {
+        reset();
+        alert("Restarting game!");
+    });
+        
 });
-
