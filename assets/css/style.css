@@ -16,12 +16,10 @@ button {
     margin-top: 10px;
 }
 
-.jumbotron {
+.game-title {
     background-color: #5f5d5d;
     color: #ffffff;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
-    height: 120px;
-    padding-top: 10px;
     margin-bottom: 10px;
     border-bottom: 6px solid #4d4747;
 }
