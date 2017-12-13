@@ -26,28 +26,24 @@ $("#purple").click(function () {
     totalScore += purpleNum;
     $("#totalScore").html(totalScore);
     winLose();
-    console.log(totalScore);
 });
 
 $("#pink").click(function () {
     totalScore += pinkNum;
     $("#totalScore").html(totalScore);
     winLose();
-    console.log(totalScore);
 });
 
 $("#orange").click(function () {
     totalScore += orangeNum;
     $("#totalScore").html(totalScore);
     winLose();
-    console.log(totalScore);
 });
 
 $("#blue").click(function () {
     totalScore += blueNum;
     $("#totalScore").html(totalScore);
     winLose();
-    console.log(totalScore);
 });
 
 // Win / lose function 
